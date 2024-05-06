@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE personas [
+    <!ELEMENT personas (persona+)> <!-- NUNCA OLVIDAR LA OCURRENCIA/ SINO DA ERROR si son más de un objeto-->
+    <!ELEMENT persona (nombre,apellido,direccion,fecha,poblacion,provincia,codigoPostal)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellido (#PCDATA)>
+    <!ELEMENT direccion (#PCDATA)>
+    <!ELEMENT fecha (#PCDATA)> <!-- PCDATA es un dato tipo string-->
+    <!ELEMENT poblacion (#PCDATA)>
+    <!ELEMENT provincia (#PCDATA)>
+    <!ELEMENT codigoPostal (#PCDATA)>
+]>
+<personas>
+    <persona>
+        <nombre>Ayline</nombre>
+        <apellido>Ponce</apellido>
+        <direccion>Pintore Kalea 9, 3E</direccion>
+        <fecha>17/08/1995</fecha>
+        <poblacion>Lasarte-Oria</poblacion>
+        <provincia>Gipuzkoa</provincia>
+        <codigoPostal>20160</codigoPostal>
+    </persona>
+    <persona>
+        <nombre>Valentin</nombre>
+        <apellido>Ponce</apellido>
+        <direccion>Pintore Kalea 9,3E</direccion>
+        <fecha>17/02/2023</fecha>
+        <poblacion>Lasarte-Oria</poblacion>
+        <provincia>Gipuzkoa</provincia>
+        <codigoPostal>20160</codigoPostal>
+    </persona>
+</personas>
+<!-- si tiene atributos, se declara cada atributo indivualmente
+ATTlist persona id
+!ATTLIST persona nombre -->

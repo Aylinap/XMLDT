@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- para enlazar este archivo a un xml se pone 
+     
+      <?xml version="1.0"?>
+        <elemento_raiz
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance "
+        xsi:noNamespaceSchemaLocation ="enlace_fichero.xsd">
+--> 
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="personas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="persona">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string"></xs:element>
+                            <xs:element name="apellido" type="xs:string"></xs:element>
+                            <xs:element name="direccion" type="xs:string"></xs:element>
+                            <xs:element name="fecha" type="xs:date"></xs:element>
+                            <xs:element name="poblacion" type="xs:string"></xs:element>
+                            <xs:element name="provincia" type="xs:string"></xs:element>
+                            <xs:element name="codigoPostal" type="xs:integer"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

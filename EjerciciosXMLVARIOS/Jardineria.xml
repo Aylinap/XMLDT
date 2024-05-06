@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<!DOCTYPE Pedidos [
+    <!ELEMENT Pedidos (Pedido+)>
+    <!ELEMENT Pedido (fechaPedido, DatosComprador, Productos, DatosEnvio)>
+    <!ATTLIST Pedido numeroPedido ID #REQUIRED>
+    <!ELEMENT fechaPedido (#PCDATA)>
+    <!ELEMENT DatosComprador (nombre, apellido, direccion, localidad, codigoPostal+)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellido (#PCDATA)>
+    <!ELEMENT direccion (#PCDATA)>
+    <!ELEMENT localidad (#PCDATA)>
+    <!ELEMENT codigoPostal (#PCDATA)>
+    <!ELEMENT Productos (Producto+)>
+    <!ELEMENT Producto (nombre_pro, precio, cantidad)>
+    <!ATTLIST Producto codigoProducto CDATA #IMPLIED>
+    <!ELEMENT nombre_pro (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>
+    <!ELEMENT cantidad (#PCDATA)>
+    <!ELEMENT DatosEnvio (nombre, apellido, direccion, localidad, codigoPostal)>
+    
+
+
+]>
+<Pedidos>
+    <Pedido numeroPedido="pedido1">
+        <fechaPedido>25/02/2024</fechaPedido>
+        <DatosComprador>
+            <nombre>Nahikari</nombre>
+            <apellido>Olaskoaga</apellido>
+            <direccion>Torrealdia s/n</direccion>
+            <localidad>Urnieta</localidad>
+            <codigoPostal>20130</codigoPostal>
+
+        </DatosComprador>
+        <Productos>
+                <Producto codigoProducto="872-AA">
+                    <nombre_pro>Cortador césped</nombre_pro>
+                    <precio>148,95 euros</precio>
+                    <cantidad>1 unidad</cantidad>
+
+                </Producto>
+                <Producto codigoProducto="926-FH">
+                    <nombre_pro>Podador</nombre_pro>
+                    <precio>7,98 euros</precio>
+                    <cantidad>3 unidades</cantidad>
+
+                </Producto>
+        </Productos>
+        <DatosEnvio>
+            <nombre>Libe</nombre>
+            <apellido>LAredo</apellido>
+            <direccion></direccion>
+            <localidad>Lesaka</localidad>
+            <codigoPostal>31770</codigoPostal>
+
+        </DatosEnvio>
+    </Pedido>
+</Pedidos>

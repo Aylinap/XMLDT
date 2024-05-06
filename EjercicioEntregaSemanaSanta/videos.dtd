@@ -1,0 +1,17 @@
+<!ELEMENT videos (video+)>
+<!ELEMENT video (titulo, tipo, (genero?, fecha_de_estreno), (pelicula | serie))>
+<!ATTLIST video
+    precio CDATA #REQUIRED
+    codigo CDATA #REQUIRED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT genero (#PCDATA)>
+<!ELEMENT fecha_de_estreno (#PCDATA)>
+<!ELEMENT pelicula (duracion, director)>
+<!ELEMENT serie (temporada, capitulos)>
+<!ELEMENT temporada (#PCDATA)>
+<!ELEMENT capitulos (capitulo+)>
+<!ELEMENT capitulo (titulo, temporada, orden, duracion)>
+<!ELEMENT duracion (#PCDATA)>
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT orden (#PCDATA)>

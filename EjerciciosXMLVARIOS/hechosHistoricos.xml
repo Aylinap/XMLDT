@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HechosHistoricos>
+    <acontecimiento descripcion="IMB presenta el PC.">
+        <Fecha>
+            <dia>12</dia>
+            <mes>08</mes>
+            <año>1981</año>
+        </Fecha>
+    </acontecimiento>
+    <acontecimiento descripcion="Creación de Google">
+        <Fecha>
+            <dia>04</dia>
+            <mes>07</mes>
+            <año>1998</año>
+        </Fecha>
+    </acontecimiento>
+    <acontecimiento descripcion="Creación de Instagram">
+        <Fecha>
+            <dia>06</dia>
+            <mes>10</mes>
+            <año>2010</año>
+        </Fecha>
+    </acontecimiento>
+</HechosHistoricos>

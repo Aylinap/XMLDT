@@ -1,0 +1,84 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="videos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="video" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titulo" type="xs:string"/><!-- en titulo me falto colocarle el tamaño que era entre 0-250-->
+                            <xs:element name="tipo">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Serie"/>
+                                        <xs:enumeration value="Película"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="genero" minOccurs="0">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Drama"/>
+                                        <xs:enumeration value="Comedia"/>
+                                        <xs:enumeration value="Ciencia Ficción"/>
+                                        <xs:enumeration value="Terror"/>
+                                        <xs:enumeration value="Acción"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="fecha_de_estreno" type="xs:date"/>
+                            <xs:choice><!-- para decir si es uno u otro, serie o pelicula-->
+                                <xs:element name="pelicula">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="duracion" type="tipoDuracion"/>
+                                            <xs:element name="director" type="xs:string"/>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+                                <xs:element name="serie">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="temporada" type="xs:integer"/>
+                                            <xs:element name="capitulos">
+                                                <xs:complexType>
+                                                    <xs:sequence>
+                                                        <xs:element name="capitulo" maxOccurs="unbounded">
+                                                            <xs:complexType>
+                                                                <xs:sequence>
+                                                                    <xs:element name="titulo" type="xs:string"/>
+                                                                    <xs:element name="temporada" type="xs:integer"/>
+                                                                    <xs:element name="orden" type="xs:integer"/>
+                                                                    <xs:element name="duracion" type="tipoDuracion"/>
+                                                                </xs:sequence>
+                                                            </xs:complexType>
+                                                        </xs:element>
+                                                    </xs:sequence>
+                                                </xs:complexType>
+                                            </xs:element>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+                            </xs:choice>
+                        </xs:sequence>
+                        <xs:attribute name="precio" type="xs:decimal" use="required"/>
+                        <xs:attribute name="codigo">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="[P/S][0-9]{2}"/><!--[0-9][0-9] tambien se puede hacer asi, en cambio del {2}-->
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Duracion definido aparte -->
+    <xs:simpleType name="tipoDuracion">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="300"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

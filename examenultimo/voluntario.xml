@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="transfo.xsl"?>
+<voluntarios xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="valivoluntario.xsd">
+        <voluntario tipo="diario">
+            <nombre>Valentin</nombre>
+            <apellido>xxxx</apellido>
+            <fecha_nacimiento>1990-05-15</fecha_nacimiento>
+            <genero>Hombre</genero>
+            <habilidades>Ayuda comunitaria</habilidades>
+            <correo>valentin@gmail.com</correo>
+            <horas_servicio>60</horas_servicio>
+            <proyectos>
+                <proyecto>P232</proyecto>
+                <proyecto>P432</proyecto>
+            </proyectos>
+            <disponibilidad>
+                <dia>Lunes</dia>
+                <dia>Miércoles</dia>
+                <dia>Viernes</dia>
+            </disponibilidad>
+        </voluntario>
+        <voluntario tipo="largaEstancia">
+            <nombre>Juan</nombre>
+            <apellido>xxxx</apellido>
+            <fecha_nacimiento>1997-05-15</fecha_nacimiento>
+            <genero>Hombre</genero>
+            <habilidades>Ayuda comunitaria</habilidades>
+            <correo>juan@gmail.com</correo>
+            <horas_servicio>30</horas_servicio>
+            <proyectos>
+                <proyecto>P001</proyecto>
+                <proyecto>P003</proyecto>
+            </proyectos>
+            <disponibilidad>
+                <mes>Marzo</mes>
+                <mes>Abril</mes>
+                <mes>Agosto</mes>
+            </disponibilidad>
+        </voluntario>
+        <voluntario tipo="largaEstancia">
+            <nombre>Valentina</nombre>
+            <apellido>xxxx</apellido>
+            <fecha_nacimiento>1999-05-15</fecha_nacimiento>
+            <genero>Mujer</genero>
+            <habilidades>Ayuda comunitaria</habilidades>
+            <correo>valentin@gmail.com</correo>
+            <horas_servicio>30</horas_servicio>
+            <proyectos>
+                <proyecto>P001</proyecto>
+                <proyecto>P456</proyecto>
+            </proyectos>
+            <disponibilidad>
+                <dia>Lunes</dia>
+                <dia>Miércoles</dia>
+                <dia>Viernes</dia>
+            </disponibilidad>
+        </voluntario>
+        <voluntario tipo="diario">
+            <nombre>miguel</nombre>
+            <apellido>xxxx</apellido>
+            <fecha_nacimiento>1991-05-15</fecha_nacimiento>
+            <genero>Hombre</genero>
+            <habilidades>Ayuda Sanidad</habilidades>
+            <correo>miguel@gmail.com</correo>
+            <horas_servicio>54</horas_servicio>
+            <proyectos>
+                <proyecto>P234</proyecto>
+                <proyecto>P345</proyecto>
+            </proyectos>
+            <disponibilidad>
+                <dia>Lunes</dia>
+                <dia>Jueves</dia>
+                <dia>Viernes</dia>
+            </disponibilidad>
+        </voluntario>
+</voluntarios>

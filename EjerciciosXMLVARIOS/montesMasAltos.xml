@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Aitxuri: Con una altitud de 1,551 metros, Aitxuri
+es el pico más alto de la provincia de Guipúzcoa y de todo el País Vasco.
+
+Aizkorri: Con una altitud de 1,528 metros, el monte Aizkorri es también uno de los picos más altos
+del País Vasco. Se encuentra en la provincia de Guipúzcoa y es parte del macizo de Aizkorri-Aratz.
+
+Anboto: Con una altitud de 1,331 metros, Anboto es un monte emblemático del País Vasco, ubicado en
+la provincia de Vizcaya. Su perfil distintivo lo hace reconocible desde gran parte del territorio
+vasco.
+
+Gorbeia: Con una altitud de 1,481 metros, el monte Gorbeia se encuentra en la provincia de Álava y
+es una de las montañas más emblemáticas del País Vasco. Es el pico más alto de la provincia de Álava
+y el segundo más alto del País Vasco.
+
+Aratz: Con una altitud de 1,444 metros, Aratz es parte del macizo de Aizkorri-Aratz y se encuentra
+en la provincia de Guipúzcoa. Es uno de los picos más impresionantes y reconocibles de la región.-->
+<!DOCTYPE MontesAltos [
+    <!ELEMENT MontesAltos (Monte+)>
+    <!ELEMENT Monte (nombre, altitud, descripcion)>
+    <!ATTLIST Monte id ID #REQUIRED> <!-- Si cambio el id por cdata deja de ser valor unico-->
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT altitud (#PCDATA)>
+    <!ELEMENT descripcion (#PCDATA)>
+]>
+
+
+<MontesAltos>
+    <Monte id="monte1"> <!-- para usar el atributo de tipo ID, tiene que se un String con numeros-->
+        <nombre>Aitxuri</nombre>
+        <altitud>1,551 metros</altitud>
+        <descripcion>Es el pico más alto ubicado en la provincia de Guipúzcoa</descripcion>
+    </Monte>
+    <Monte id="monte2">
+        <nombre>Aizkorri</nombre>
+        <altitud>1,528  metros</altitud>
+        <descripcion>Es el segundo pico más alto, ubicado en la provincia de Guipúzcoa</descripcion>
+    </Monte>
+    <Monte id="monte3">
+        <nombre>Anboto</nombre>
+        <altitud>1,331 metros</altitud>
+        <descripcion>Monte emblemático del País Vasco, ubicado en la provincia de Vizcaya</descripcion>
+    </Monte>
+    <Monte id="monte4">
+        <nombre>Gorbeia</nombre>
+        <altitud>1,481 metros</altitud>
+        <descripcion>Se encuentra en la provincia de Álava y el segundo más alto del País Vasco</descripcion>
+    </Monte>
+</MontesAltos>

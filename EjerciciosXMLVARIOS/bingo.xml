@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bingo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:noNamespaceSchemaLocation=".//bingo.xsd"> 
+  <bola numero="85"></bola>
+  <bola numero="12"></bola>
+  <bola numero="5"></bola>
+  <bola numero="4"></bola>
+  <bola numero="89"></bola>
+</bingo>

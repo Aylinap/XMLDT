@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE videos SYSTEM "videos.dtd">
+<videos>
+    <video precio="3.99" codigo="S45">
+        <titulo>Stranger Things</titulo>
+        <tipo>Serie</tipo>
+        <genero>Ciencia Ficción</genero>
+        <fecha_de_estreno>2016-07-15</fecha_de_estreno>
+        <serie>
+            <temporada>1</temporada>
+            <capitulos>
+                <capitulo>
+                    <titulo>Capitulo 1: El inicio</titulo>
+                    <temporada>1</temporada>
+                    <orden>1</orden>
+                    <duracion>50</duracion>
+                </capitulo>
+                <capitulo>
+                    <titulo>Capitulo 2: La desaparicion de Will</titulo>
+                    <temporada>1</temporada>
+                    <orden>2</orden>
+                    <duracion>55</duracion>
+                </capitulo>
+            </capitulos>
+        </serie>
+    </video>
+    <video precio="9.99" codigo="P10">
+        <titulo>Interstellar</titulo>
+        <tipo>Película</tipo>
+        <genero>Ciencia Ficción</genero>
+        <fecha_de_estreno>2014-11-07</fecha_de_estreno>
+        <pelicula>
+            <duracion>169</duracion>
+            <director>Christopher Nolan</director>
+        </pelicula>
+    </video>
+    <video precio="8.99" codigo="P30">
+        <titulo>Blade Runner 2049</titulo>
+        <tipo>Película</tipo>
+        <genero>Ciencia Ficción</genero>
+        <fecha_de_estreno>2017-10-06</fecha_de_estreno>
+        <pelicula>
+            <duracion>163</duracion>
+            <director>Denis Villeneuve</director>
+        </pelicula>
+    </video>
+</videos>

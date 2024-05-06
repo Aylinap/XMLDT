@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="voluntarios">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="voluntario" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="nombreTipo"></xs:element>
+                            <xs:element name="apellido"></xs:element>
+                            <xs:element name="fecha_nacimiento" type="xs:date"></xs:element>
+                            <xs:element name="genero">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Mujer"></xs:enumeration>
+                                        <xs:enumeration value="Hombre"></xs:enumeration>
+                                        <xs:enumeration value="No_binario"></xs:enumeration>
+                                        <xs:enumeration value="Otros"></xs:enumeration>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="habilidades" type="xs:string"></xs:element>
+                            <xs:element name="correo">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <!-- buscar si esta bien esto??-->
+                                        <!-- https://stackoverflow.com/questions/2147780/how-to-validate-an-email-id-in-xml-schema-->
+                                        <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="horas_servicio" type="xs:positiveInteger" minOccurs="0"></xs:element>
+                            <xs:element name="proyectos" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="proyecto" type="proyectoTipo" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="disponibilidad">
+                                <xs:complexType>
+                                    <xs:choice>
+                                        <xs:element name="dia" type="xs:string" minOccurs="0" maxOccurs="7"></xs:element>
+                                        <xs:element name="mes" type="xs:string" minOccurs="0" maxOccurs="12"></xs:element>
+                                    </xs:choice>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="tipo" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="diario"></xs:enumeration>
+                                    <xs:enumeration value="largaEstancia"></xs:enumeration>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+<!--declaraciones apartadas -->
+     <!-- tipo restriccion nombre-->
+     <xs:simpleType name="nombreTipo">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"></xs:minLength>
+            <xs:maxLength value="250"></xs:maxLength>
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- restriccion para el proyecto  -->
+    <xs:simpleType name="proyectoTipo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[P][0-9]{3}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

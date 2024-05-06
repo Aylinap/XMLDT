@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Marcadores>
+    <paginaWeb>
+        <nombre>Usurbil landide Eskola</nombre>
+        <descripcion>Centro de formación profesional</descripcion>
+        <url>https://lhusurbil.eus/web/default.aspx?lng=es</url>
+    </paginaWeb>
+    <paginaWeb>
+        <nombre>Wikipedia</nombre>
+        <descripcion>Eciclopedia Libre</descripcion>
+        <url>https://eu.wikipedia.org/</url>
+    </paginaWeb>
+    <paginaWeb>
+        <nombre>W3C</nombre>
+        <descripcion>World wide web consortium</descripcion>
+        <url>http://www.w3.org</url>
+    </paginaWeb>
+</Marcadores>

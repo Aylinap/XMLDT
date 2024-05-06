@@ -1,0 +1,31 @@
+<!-- lenguaje de marcas extensible, en español
+        Traen informacion 
+            Se componen de etiquetas que nos datos e informacion que queremos profesar
+                estas etiquetas pueden venir indivual o anidadas
+                    Cuanto màs grande el fichero mas informacion trae
+                    
+                    Al igual que la etiqueta HTML debemos indicar una etiqueta general
+                    que contendra la informacion
+                    <?xml version="1.0" encoding="UTF-8"?> -->
+
+<!DOCTYPE DatosPaises [
+    <!ELEMENT DatosPaises (Continente+)>
+    <!ELEMENT Continente (Pais, Capital)>
+    <!ATTLIST Continente id ID #REQUIRED>
+    <!ELEMENT Pais (#PCDATA)>
+    <!ELEMENT Capital (#PCDATA)>
+]>
+<DatosPaises>
+    <Continente id="Asia">
+        <Pais>India</Pais>
+        <Capital>Nueva Delhi</Capital>
+    </Continente>
+    <Continente id="Europa">
+        <Pais>Portugal</Pais>
+        <Capital>Lisboa</Capital>
+    </Continente>
+    <Continente id="Africa">
+        <Pais>Egipto</Pais>
+        <Capital>El Cairo</Capital>
+    </Continente>
+</DatosPaises>

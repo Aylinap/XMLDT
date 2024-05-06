@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<personas
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance "
+xsi:noNamespaceSchemaLocation ="validacion1.xsd">
+
+    <persona>
+        <nombre>Ayline</nombre>
+        <apellido>Ponce</apellido>
+        <direccion>Pintore Kalea 9, 3E</direccion>
+        <fecha>17/08/1995</fecha>
+        <poblacion>Lasarte-Oria</poblacion>
+        <provincia>Gipuzkoa</provincia>
+        <codigoPostal>20160</codigoPostal>
+    </persona>
+    <persona>
+        <nombre>Valentin</nombre>
+        <apellido>Ponce</apellido>
+        <direccion>Pintore Kalea 9,3E</direccion>
+        <fecha>17/02/2023</fecha>
+        <poblacion>Lasarte-Oria</poblacion>
+        <provincia>Gipuzkoa</provincia>
+        <codigoPostal>20160</codigoPostal>
+    </persona>
+</personas>

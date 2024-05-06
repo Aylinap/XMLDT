@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="videos2.xsl"?>
+<videos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="videos2.xsd">
+    <video precio="3.99" codigo="S45">
+        <titulo>Stranger Things</titulo>
+        <tipo>Serie</tipo>
+        <genero>Ciencia Ficción</genero>
+        <fecha_de_estreno>2016-07-15</fecha_de_estreno>
+        <serie>
+            <temporada>1</temporada>
+            <capitulos>
+                <capitulo>
+                    <titulo>Capitulo 1: El inicio</titulo>
+                    <temporada>1</temporada>
+                    <orden>1</orden>
+                    <duracion>50</duracion>
+                </capitulo>
+                <capitulo>
+                    <titulo>Capitulo 2: La desaparicion de Will</titulo>
+                    <temporada>1</temporada>
+                    <orden>2</orden>
+                    <duracion>55</duracion>
+                </capitulo>
+                <capitulo>
+                    <titulo>Capitulo 3: La extraña desaparición de Barb</titulo>
+                    <temporada>1</temporada>
+                    <orden>3</orden>
+                    <duracion>48</duracion>
+                </capitulo>
+                <capitulo>
+                    <titulo>Capitulo 4: Los experimentos del laboratorio</titulo>
+                    <temporada>1</temporada>
+                    <orden>4</orden>
+                    <duracion>52</duracion>
+                </capitulo>
+                <capitulo>
+                    <titulo>Capitulo 5: El encuentro con el Demogorgon</titulo>
+                    <temporada>1</temporada>
+                    <orden>5</orden>
+                    <duracion>53</duracion>
+                </capitulo>
+            </capitulos>
+        </serie>
+    </video>
+    <video precio="5.49" codigo="S50">
+        <titulo>Supernatural</titulo>
+        <tipo>Serie</tipo>
+        <genero>Terror</genero>
+        <fecha_de_estreno>2005-09-13</fecha_de_estreno>
+        <serie>
+            <temporada>1</temporada>
+            <capitulos>
+                <capitulo>
+                    <titulo>Capitulo 1: El comienzo</titulo>
+                    <temporada>1</temporada>
+                    <orden>1</orden>
+                    <duracion>45</duracion>
+                </capitulo>
+                <capitulo>
+                    <titulo>Capitulo 2: La casa encantada</titulo>
+                    <temporada>1</temporada>
+                    <orden>2</orden>
+                    <duracion>50</duracion>
+                </capitulo>
+                <capitulo>
+                    <titulo>Capitulo 3: El exorcismo</titulo>
+                    <temporada>1</temporada>
+                    <orden>3</orden>
+                    <duracion>48</duracion>
+                </capitulo>
+                <capitulo>
+                    <titulo>Capitulo 4: El pacto</titulo>
+                    <temporada>1</temporada>
+                    <orden>4</orden>
+                    <duracion>52</duracion>
+                </capitulo>
+            </capitulos>
+        </serie>
+    </video>    
+    <video precio="9.99" codigo="P10">
+        <titulo>Interstellar</titulo>
+        <tipo>Película</tipo>
+        <genero>Ciencia Ficción</genero>
+        <fecha_de_estreno>2014-11-07</fecha_de_estreno>
+        <pelicula>
+            <duracion>169</duracion>
+            <director>Christopher Nolan</director>
+        </pelicula>
+    </video>
+    <video precio="8.99" codigo="P30">
+        <titulo>Blade Runner 2049</titulo>
+        <tipo>Película</tipo>
+        <genero>Ciencia Ficción</genero>
+        <fecha_de_estreno>2017-10-06</fecha_de_estreno>
+        <pelicula>
+            <duracion>163</duracion>
+            <director>Denis Villeneuve</director>
+        </pelicula>
+    </video>
+</videos>

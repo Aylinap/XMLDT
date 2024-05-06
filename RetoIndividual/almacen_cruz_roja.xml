@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="almacentransfo.xsl"?>
+<donaciones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="almacen.xsd">
+    <empresa_donante cif="A12345678">
+        <nombre>Empresa Valentin</nombre>
+    </empresa_donante>
+    <fecha_donacion>2024-04-22</fecha_donacion>
+    <donaciones>
+        <alimento>
+            <tipo>Perecedero</tipo>
+            <referencia>P12345</referencia>
+            <nombre_producto>Queso</nombre_producto>
+            <cantidad>100</cantidad>
+            <empresa_manufactura>Queseria Comeback</empresa_manufactura>
+            <fecha_caducidad>2024-05-01</fecha_caducidad>
+            <mantener_refrigerado>NO</mantener_refrigerado>
+        </alimento>
+        <alimento>
+            <tipo>No perecedero</tipo>
+            <referencia>N54321</referencia>
+            <nombre_producto>Latas de Atún</nombre_producto>
+            <cantidad>50</cantidad>
+            <empresa_manufactura>Empresa Atuncito Feliz</empresa_manufactura>
+            <conserva>SI</conserva>
+        </alimento>
+    </donaciones>
+</donaciones>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- estructura general de la validacion -->
+    <xs:element name="donaciones">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="empresa_donante">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="nombreTipo"></xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="cif" type="cifTipo"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="fecha_donacion" type="xs:date"></xs:element>
+                <xs:element name="donaciones">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="alimento" type="alimentoTipo" maxOccurs="unbounded"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+<!-- declaraciones afuera de la estructura general -->
+        <!-- tipo restriccion nombre-->
+        <xs:simpleType name="nombreTipo">
+            <xs:restriction base="xs:string">
+                <xs:minLength value="1"></xs:minLength>
+                <xs:maxLength value="150"></xs:maxLength>
+            </xs:restriction>
+        </xs:simpleType>
+    <!-- restriccion para el el cif -->
+        <xs:simpleType name="cifTipo">
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[A-Z][0-9]{8}"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    <!-- formato estandar para los productos, todos lo tienen que tener -->
+        <xs:complexType name="alimentoTipo">
+            <xs:sequence>
+                <xs:element name="tipo">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string"><!-- enum-->
+                            <xs:enumeration value="Perecedero"></xs:enumeration>
+                            <xs:enumeration value="No perecedero"></xs:enumeration>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="referencia">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[PN][0-9]{5}"></xs:pattern>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="nombre_producto" type="nombreTipo"></xs:element><!-- P o N seguido de 5 dígitos-->
+                <xs:element name="cantidad" type="xs:positiveInteger"></xs:element><!-- nº positivo-->
+                <xs:element name="empresa_manufactura" type="nombreTipo"></xs:element> <!-- mínimo un dígito máximo 150-->
+                <xs:element name="fecha_caducidad" type="xs:date" minOccurs="0"></xs:element><!-- puede estar o no-->
+                <xs:element name="mantener_refrigerado" minOccurs="0"><!-- puede estar o no-->
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="SI"></xs:enumeration>
+                            <xs:enumeration value="NO"></xs:enumeration>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="conserva" minOccurs="0"><!-- puede estar o no-->
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="SI"></xs:enumeration>
+                            <xs:enumeration value="NO"></xs:enumeration>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+</xs:schema>
